@@ -1,6 +1,10 @@
 package Testing;
-// Joe Tüscher
-// Ticket No. #033
+/*
+ * author:		Joe Tüscher
+ * element:		#033
+ * date:		18.03.19
+ * 
+ */
 import Toolbox.ElectricalResistance;
 
 public class ElectricalResistanceTest {

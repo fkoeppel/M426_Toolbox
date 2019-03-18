@@ -1,6 +1,10 @@
 package Toolbox;
-// Joe Tüscher
-// Ticket No. #033
+/*
+ * author:		Joe Tüscher
+ * element:		#033
+ * date:		18.03.19
+ * 
+ */
 public class ElectricalResistance{
 	
 	public double Resistance(double r, double i){
