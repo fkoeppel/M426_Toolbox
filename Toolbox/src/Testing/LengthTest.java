@@ -10,21 +10,21 @@ import Toolbox.Length;
 
 public class LengthTest {
 	public LengthTest() {
-		this.meterToMile();
-		this.meterToFeet();
-		this.meterToInche();
-		this.mileToMeter();
-		this.mileToFeet();
-		this.mileToInche();
-		this.feetToMeter();
-		this.feetToMile();
-		this.feetToInche();
-		this.incheToMeter();
-		this.incheToMile();
-		this.incheToFeet();
+		this.testMeterToMile();
+		this.testMeterToFeet();
+        this.testMeterToInche();
+        this.testMileToMeter();
+        this.testMileToFeet();
+        this.testMileToInche();
+        this.testFeetToMeter();
+        this.testFeetToMile();
+        this.testFeetToInche();
+        this.testIncheToMeter();
+        this.testIncheToMile();
+        this.testIncheToFeet();
 	}
 	
-	public boolean meterToMile() {
+	public boolean testMeterToMile() {
 		String methodName = new Object() {}
 	      .getClass()
 	      .getEnclosingMethod()
@@ -46,7 +46,7 @@ public class LengthTest {
 		System.out.println("FAILURE " + methodName);
 		return false;
 	}
-	public boolean meterToFeet() {
+	public boolean testMeterToFeet() {
 		String methodName = new Object() {}
 	      .getClass()
 	      .getEnclosingMethod()
@@ -68,7 +68,7 @@ public class LengthTest {
 		System.out.println("FAILURE " + methodName);
 		return false;
 	}
-	public boolean meterToInche() {
+	public boolean testMeterToInche() {
 		String methodName = new Object() {}
 	      .getClass()
 	      .getEnclosingMethod()
@@ -91,7 +91,7 @@ public class LengthTest {
 		return false;
 	}
 	
-	public boolean mileToMeter() {
+	public boolean testMileToMeter() {
 		String methodName = new Object() {}
 	      .getClass()
 	      .getEnclosingMethod()
@@ -114,7 +114,7 @@ public class LengthTest {
 		return false;
 	}
 	
-	public boolean mileToFeet() {
+	public boolean testMileToFeet() {
 		String methodName = new Object() {}
 	      .getClass()
 	      .getEnclosingMethod()
@@ -137,7 +137,7 @@ public class LengthTest {
 		return false;
 	}
 	
-	public boolean mileToInche() {
+	public boolean testMileToInche() {
 		String methodName = new Object() {}
 	      .getClass()
 	      .getEnclosingMethod()
@@ -160,7 +160,7 @@ public class LengthTest {
 		return false;
 	}
 	
-	public boolean feetToMeter() {
+	public boolean testFeetToMeter() {
 		String methodName = new Object() {}
 	      .getClass()
 	      .getEnclosingMethod()
@@ -183,7 +183,7 @@ public class LengthTest {
 		return false;
 	}
 	
-	public boolean feetToMile() {
+	public boolean testFeetToMile() {
 		String methodName = new Object() {}
 	      .getClass()
 	      .getEnclosingMethod()
@@ -206,7 +206,7 @@ public class LengthTest {
 		return false;
 	}
 	
-	public boolean feetToInche() {
+	public boolean testFeetToInche() {
 		String methodName = new Object() {}
 	      .getClass()
 	      .getEnclosingMethod()
@@ -229,7 +229,7 @@ public class LengthTest {
 		return false;
 	}
 	
-	public boolean incheToMeter() {
+	public boolean testIncheToMeter() {
 		String methodName = new Object() {}
 	      .getClass()
 	      .getEnclosingMethod()
@@ -252,7 +252,7 @@ public class LengthTest {
 		return false;
 	}
 	
-	public boolean incheToMile() {
+	public boolean testIncheToMile() {
 		String methodName = new Object() {}
 	      .getClass()
 	      .getEnclosingMethod()
@@ -275,7 +275,7 @@ public class LengthTest {
 		return false;
 	}
 	
-	public boolean incheToFeet() {
+	public boolean testIncheToFeet() {
 		String methodName = new Object() {}
 	      .getClass()
 	      .getEnclosingMethod()

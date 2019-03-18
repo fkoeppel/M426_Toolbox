@@ -5,11 +5,11 @@ import Toolbox.Promillewert;
 public class PromillewertTest {
 	
 	public PromillewertTest() {
-		this.Promillewert1();
-		this.Promillewert2();
+		this.testPromillewert1();
+		this.testPromillewert2();
 	}
 	
-	public boolean Promillewert1() {
+	public boolean testPromillewert1() {
 		String methodName = new Object() {}
 	      .getClass()
 	      .getEnclosingMethod()
@@ -44,7 +44,7 @@ public class PromillewertTest {
 		return false;
 	}
 	
-	public boolean Promillewert2() {
+	public boolean testPromillewert2() {
 		String methodName = new Object() {}
 	      .getClass()
 	      .getEnclosingMethod()
