@@ -1,5 +1,6 @@
 package Testing;
-
+// Joe Tüscher
+// Ticket No. #033
 import Toolbox.ElectricalResistance;
 
 public class ElectricalResistanceTest {

@@ -1,5 +1,6 @@
 package Toolbox;
-
+// Joe Tüscher
+// Ticket No. #033
 public class ElectricalResistance{
 	
 	public double Resistance(double r, double i){
