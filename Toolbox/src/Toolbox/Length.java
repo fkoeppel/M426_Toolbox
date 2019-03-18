@@ -52,7 +52,7 @@ public class Length {
 		case "inche":
 			return this.length*39.37;
 		default:
-			return 0.0;
+			return -1.0;
 		}
 	}
 	private double mile(String to) {
@@ -64,7 +64,7 @@ public class Length {
 		case "inche":
 			return this.length*63360;
 		default:
-			return 0.0;
+			return -1.0;
 		}
 	}
 	private double feet(String to) {
@@ -76,7 +76,7 @@ public class Length {
 		case "inche":
 			return this.length*12;
 		default:
-			return 0.0;
+			return -1.0;
 		}
 	}
 	private double inche(String to) {
@@ -88,7 +88,7 @@ public class Length {
 		case "feet":
 			return this.length/12;
 		default:
-			return 0.0;
+			return -1.0;
 		}
 	}
 }
