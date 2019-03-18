@@ -7,6 +7,7 @@ public class Testing {
 		new PromillewertTest();
 		new ElectricalResistanceTest();
 		new LengthTest();
+		new DensityTest();
 	}
 	
 }
