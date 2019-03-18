@@ -1,6 +1,9 @@
 package Toolbox;
 
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.Map.Entry;
 
 public class TextEditor {
 	
@@ -14,6 +17,15 @@ public class TextEditor {
 		umlaute.add("Ü");
 		umlaute.add("Ä");
 		umlaute.add("Ö");
+	}
+	
+	public String textErsetzen(String text, HashMap<String, String> map) {
+		Iterator<Entry<String, String>> iterator = map.entrySet().iterator();
+		while (iterator.hasNext()) {
+			Entry<String, String> entry = iterator.next();
+	    	text = text.replaceAll(entry.getKey(), entry.getValue());
+		}
+		return text;
 	}
 
 	public int textZaehlen(String text) {

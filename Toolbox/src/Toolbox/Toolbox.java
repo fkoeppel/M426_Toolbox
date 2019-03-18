@@ -9,10 +9,10 @@ package Toolbox;
 
 public class Toolbox {
 	public TextSuchen TextSuchen;
-	private TextEditor TextEditor;
-	private Promillewert Promillewert;
-	private ElectricalResistance ElectricalResistance;
-	private Density Density;
+	public TextEditor TextEditor;
+	public Promillewert Promillewert;
+	public ElectricalResistance ElectricalResistance;
+	public Density Density;
 	
 	public Toolbox() {
 		this.TextSuchen = new TextSuchen();
