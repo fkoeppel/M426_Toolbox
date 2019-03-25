@@ -8,6 +8,7 @@ public class Testing {
 		new ElectricalResistanceTest();
 		new LengthTest();
 		new DensityTest();
+		new PythagorasTest();
 	}
 	
 }
