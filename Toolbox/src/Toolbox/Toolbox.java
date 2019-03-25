@@ -14,6 +14,7 @@ public class Toolbox {
 	public ElectricalResistance ElectricalResistance;
 	public Density Density;
 	public CurrencyConverter CurrencyConverter;
+	public CircleCalc CircleCalc;
 	
 	public Toolbox() {
 		this.TextSuchen = new TextSuchen();
@@ -22,5 +23,6 @@ public class Toolbox {
 		this.ElectricalResistance = new ElectricalResistance();
 		this.Density = new Density();
 		this.CurrencyConverter = new CurrencyConverter();
+		this.CircleCalc = new CircleCalc();
 	}
 }
