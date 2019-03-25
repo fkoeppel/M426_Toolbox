@@ -17,6 +17,7 @@ public class Toolbox {
 	public CircleCalc CircleCalc;
 	public ImageConverter ImageConverter;
 	public MetricUnit MetricUnit;
+	public SurfaceCalc SurfaceCalc;
 	
 	public Toolbox() {
 		this.TextSuchen = new TextSuchen();
@@ -28,5 +29,6 @@ public class Toolbox {
 		this.CircleCalc = new CircleCalc();
 		this.ImageConverter = new ImageConverter();
 		this.MetricUnit = new MetricUnit();
+		this.SurfaceCalc = new SurfaceCalc();
 	}
 }
