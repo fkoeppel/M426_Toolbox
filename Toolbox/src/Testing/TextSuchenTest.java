@@ -1,5 +1,7 @@
 package Testing;
 
+import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
 import Toolbox.TextSuchen;
 
 public class TextSuchenTest {
@@ -9,25 +11,8 @@ public class TextSuchenTest {
 		this.testSuchen();
 	}
 	
-	public boolean testSuchen() {
-		String methodName = new Object() {}
-	      .getClass()
-	      .getEnclosingMethod()
-	      .getName();
-		System.out.println(methodName + "...");
-		try {
-			//OWN BEGIN
-			String s = test.suchen("Hello", "World");
-			if (s.equals("Hello World")) {
-			//OWN END
-				System.out.println("SUCCESS " + methodName);
-				return true;
-			}
-		} catch (Exception e) {
-			System.out.println("FAILURE, " + methodName + " " + e);
-		}	
-		
-		System.out.println("FAILURE " + methodName);
-		return false;
+	@Test
+	public void testSuchen() {
+		assertEquals("", test.suchen("Hello", "World"), "Hello World");
 	}
 }
