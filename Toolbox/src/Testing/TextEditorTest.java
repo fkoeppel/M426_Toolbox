@@ -1,5 +1,7 @@
 package Testing;
 
+import static org.junit.Assert.assertEquals;
+
 /*
  * author:		Manuel Häuptli
  * element:		037 & 039
@@ -8,18 +10,25 @@ package Testing;
  */
 
 import java.util.HashMap;
+import java.util.LinkedList;
 
+import org.junit.Test;
 import Toolbox.TextEditor;
 
 public class TextEditorTest {
 	private TextEditor test = new TextEditor();
 	
-	public TextEditorTest() {
-		this.textZaehlen();
-		this.textErsetzen();
+	@Test
+	public void suchen() {
+		String text = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.";
+		String suche = "consetetur";
+		LinkedList<String> expected = new LinkedList<String>();
+		expected.add("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.");
+		expected.add("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.");
+		assertEquals(expected, test.suchen(text,suche));
 	}
 	
-	public boolean textZaehlen() {
+	public boolean zaehlen() {
 		String methodName = new Object() {}
 	      .getClass()
 	      .getEnclosingMethod()
@@ -44,7 +53,7 @@ public class TextEditorTest {
 		return false;
 	}
 	
-	public boolean textErsetzen() {
+	public boolean ersetzen() {
 		String methodName = new Object() {}
 	      .getClass()
 	      .getEnclosingMethod()
