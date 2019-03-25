@@ -1,41 +1,101 @@
+/*
+ * author:		Kimi Janshon
+ * element:		024
+ * date:		25.03.19
+ * 
+ */
+
 package Toolbox;
 
-//Java program explaining Currency class methods 
-//getInstance(), getCurrencyCode(),getDefaultFractionDigits() 
-//getDisplayName(), getSymbol() 
-import java.util.*; 
 public class CurrencyConverter 
 { 
- public static void main(String[] args) 
- { 
-     // Use of getInstance() method to 'AUD' instance 
-     Currency c1 = Currency.getInstance("AUD"); //Australian Dollar 
-     Currency c2 = Currency.getInstance("JPY");  //Japan Yen 
-     Currency c3 = Currency.getInstance("USD");  //Japan Yen 
-
-     // Use of getCurrencyCode() method 
-     String cCode1 = c1.getCurrencyCode(); 
-     String cCode2 = c2.getCurrencyCode(); 
-     System.out.println("Australian Dollar code : " + cCode1); 
-     System.out.println("Japan Yen code : " + cCode2); 
-     System.out.println(""); 
-
-     // Use of getDefaultFractionDigits() method 
-     int D1 = c1.getDefaultFractionDigits(); 
-     System.out.println("AUD Fraction digits : " + D1); 
-
-     int D2 = c2.getDefaultFractionDigits(); 
-     System.out.println("JPY fraction digits : " + D2); 
-     System.out.println(""); 
-
-     // Use of getDisplayName() method 
-     System.out.println("AUD Display : "+c1.getDisplayName()); 
-     System.out.println("JPY Display : "+c2.getSymbol()); 
-     System.out.println(""); 
-
-     // Use of getSymbol() method 
-     System.out.println("JPY Symbol : "+c2.getSymbol()); 
-     System.out.println("USD Symbol : "+c3.getSymbol()); 
-
- } 
+	private double eur;
+	private double chf;
+	private double usd;
+	private double gbp;
+	
+	public double getCurrency(double amount, String from, String to) {
+		boolean forward = this.setCurrency(from);
+		double res = -1.0;
+		if (forward) {
+			res = this.calc(amount, to);
+		}
+		if (res < 0) {
+			res = -1.0;
+		}
+		double res1 = Math.round(res*100);
+		res1 /= 100;
+		return res1;
+	}
+	
+	private double calc(double amount, String to) {
+		double res, tocalc;
+		switch (to) {
+		case "eur":
+			tocalc = this.eur;
+			break;
+		case "chf":
+			tocalc = this.chf;
+			break;
+		case "usd":
+			tocalc = this.usd;
+			break;
+		case "gbp":
+			tocalc = this.gbp;
+			break;
+		default:
+			tocalc = -1.0;
+			break;
+		}
+		res = amount * tocalc;
+		return res;
+	}
+	
+	private boolean setCurrency(String currency) {
+		switch (currency) {
+		case "eur":
+			this.eur();
+			break;
+		case "chf":
+			this.chf();
+			break;
+		case "usd":
+			this.usd();
+			break;
+		case "gbp":
+			this.gbp();
+			break;
+		default:
+			return false;
+		}
+		return true;
+	}
+	
+	private void eur() {
+		this.eur = 1.0;
+		this.chf = 1.12;
+		this.usd = 1.13;
+		this.gbp = 0.86;
+	}
+	
+	private void chf() {
+		this.eur = 0.89;
+		this.chf = 1.0;
+		this.usd = 1.01;
+		this.gbp = 0.76;
+	}
+	
+	private void usd() {
+		this.eur = 0.88;
+		this.chf = 0.99;
+		this.usd = 1.0;
+		this.gbp = 0.76;
+	}
+	
+	private void gbp() {
+		this.eur = 1.17;
+		this.chf = 1.31;
+		this.usd = 1.32;
+		this.gbp = 1.0;
+	}
 } 
