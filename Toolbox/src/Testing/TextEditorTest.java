@@ -1,5 +1,12 @@
 package Testing;
 
+/*
+ * author:		Manuel Häuptli
+ * element:		037 & 039
+ * date:		18.03.19
+ * 
+ */
+
 import java.util.HashMap;
 
 import Toolbox.TextEditor;
