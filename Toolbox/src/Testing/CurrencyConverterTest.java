@@ -1,3 +1,10 @@
+/*
+ * author:		Kimi Janshon
+ * element:		024
+ * date:		25.03.19
+ * 
+ */
+
 package Testing;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

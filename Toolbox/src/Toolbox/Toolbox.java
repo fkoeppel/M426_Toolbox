@@ -22,6 +22,5 @@ public class Toolbox {
 		this.ElectricalResistance = new ElectricalResistance();
 		this.Density = new Density();
 		this.CurrencyConverter = new CurrencyConverter();
-		System.out.println(this.CurrencyConverter.getCurrency(20, "eur", "chf"));
 	}
 }
