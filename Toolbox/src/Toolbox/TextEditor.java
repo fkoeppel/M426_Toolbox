@@ -128,5 +128,22 @@ public class TextEditor {
 			}
 		}
 		return lines;
+	}
+
+	public String loeschen(String text, String loeschen, int whitespaces) {
+		if(text == null || loeschen == null) {
+			throw new IllegalArgumentException("Text wird verlangt!");
+		}
+		
+		if(whitespaces == 0) {
+			text = text.replaceAll(loeschen, "");
+		}else if (whitespaces == 1) {
+			text = text.replaceAll(loeschen + " ", "");
+		}else if (whitespaces == -1) {
+			text = text.replaceAll(" " + loeschen, "");
+		}else {
+			throw new IllegalArgumentException("Parameter sind nicht valide!");
+		}
+		return text;
 	} 
 }
