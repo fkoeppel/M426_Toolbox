@@ -1,3 +1,10 @@
+/*
+ * author:		Kimi Janshon
+ * element:		012
+ * date:		18.03.19
+ * 
+ */
+
 package Toolbox;
 import java.util.Scanner;
 

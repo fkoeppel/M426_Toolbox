@@ -1,3 +1,10 @@
+/*
+ * author:		Kimi Janshon
+ * element:		035
+ * date:		25.03.19
+ * 
+ */
+
 package Toolbox;
 
 public class Pythagoras {
