@@ -1,7 +1,8 @@
 package Testing;
 
-import static org.junit.Assert.assertEquals;
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.Test;
 import Toolbox.TextSuchen;
 
 public class TextSuchenTest {
@@ -13,6 +14,6 @@ public class TextSuchenTest {
 	
 	@Test
 	public void testSuchen() {
-		assertEquals("", test.suchen("Hello", "World"), "Hello World");
+		assertEquals("Hello World", test.suchen("Hello", "World"));
 	}
 }
