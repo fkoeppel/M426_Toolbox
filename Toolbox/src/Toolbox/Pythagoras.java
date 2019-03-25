@@ -16,9 +16,7 @@ public class Pythagoras {
         
         if (both.equals("ab") || both.equals("ba")) {
             res = this.getC();
-        }else if (both.equals("ac") || both.equals("ca")) {
-            res = this.getAorB();
-        }else if (both.equals("bc") || both.equals("cb")) {
+        }else if (both.equals("ac") || both.equals("ca") || both.equals("bc") || both.equals("cb")) {
             res = this.getAorB();
         }
         return res;

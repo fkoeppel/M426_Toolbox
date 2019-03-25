@@ -18,7 +18,7 @@ public class PythagorasTest {
 		try {
 			//OWN BEGIN
 			Pythagoras py = new Pythagoras();
-			double res = py.getOtherNumber(3, "a", 4, "b");
+			double res = py.getOtherNumber(-3, "a", 4, "b");
 			if (res == 5) {
 			//OWN END
 				System.out.println("SUCCESS " + methodName);
