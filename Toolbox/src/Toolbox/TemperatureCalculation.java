@@ -1,20 +1,15 @@
 package Toolbox;
 
+import java.text.DecimalFormat;
+
+/*
+ * author:		Federico Köppel
+ * element:		007
+ * date:		18.03.19
+ * 
+ */
+
 public class TemperatureCalculation {
-
-	package Toolbox;
-
-	/*
-	 * author:		Federico Köppel
-	 * element:		007
-	 * date:		18.03.19
-	 * 
-	 */
-
-	import java.text.DecimalFormat;
-
-	public class TemperatureCalculation {
-
 
 		public double CelsiusToFahrenheit(double celsius) {
 
@@ -75,5 +70,4 @@ public class TemperatureCalculation {
 
 
 	}
-	
-}
+

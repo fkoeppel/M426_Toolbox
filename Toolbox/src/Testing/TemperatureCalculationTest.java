@@ -1,5 +1,7 @@
 package Testing;
 
+import Toolbox.TemperatureCalculation;
+
 
 	/*
 	 * author:		Federico Köppel
@@ -8,13 +10,6 @@ package Testing;
 	 * 
 	 */
 
-
-
-public class TemperatureCalculationTest {
-
-	package Testing;
-
-	import Toolbox.TemperatureCalculation;
 
 	public class TemperatureCalculationTest {
 		private TemperatureCalculation test = new TemperatureCalculation();
@@ -183,12 +178,4 @@ public class TemperatureCalculationTest {
 			return false;
 		}
 
-
-
-
-
-
-
-	}
-	
 }
