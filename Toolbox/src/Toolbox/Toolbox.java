@@ -16,6 +16,7 @@ public class Toolbox {
 	public CurrencyConverter CurrencyConverter;
 	public CircleCalc CircleCalc;
 	public ImageConverter ImageConverter;
+	public MetricUnit MetricUnit;
 	
 	public Toolbox() {
 		this.TextSuchen = new TextSuchen();
@@ -26,5 +27,6 @@ public class Toolbox {
 		this.CurrencyConverter = new CurrencyConverter();
 		this.CircleCalc = new CircleCalc();
 		this.ImageConverter = new ImageConverter();
+		this.MetricUnit = new MetricUnit();
 	}
 }
