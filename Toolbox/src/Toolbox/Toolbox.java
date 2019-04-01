@@ -22,6 +22,7 @@ public class Toolbox {
 	public GewichtsmasseUmwandeln GewichtsmasseUmwandeln;
 	public Round Round;
 	public TriangleCalc TriangleCalc;
+	public BerechnungPyramide BerechnungPyramide;
 
 	public Toolbox() {
 		this.TextSuchen = new TextSuchen();
@@ -38,5 +39,6 @@ public class Toolbox {
 		this.GewichtsmasseUmwandeln = new GewichtsmasseUmwandeln();
 		this.Round = new Round();
 		this.TriangleCalc = new TriangleCalc();
+		this.BerechnungPyramide = new BerechnungPyramide();
 	}
 }
