@@ -18,6 +18,7 @@ public class Toolbox {
 	public ImageConverter ImageConverter;
 	public MetricUnit MetricUnit;
 	public SurfaceCalc SurfaceCalc;
+	public HashGenerator HashGenerator;
 	
 	public Toolbox() {
 		this.TextSuchen = new TextSuchen();
@@ -30,5 +31,6 @@ public class Toolbox {
 		this.ImageConverter = new ImageConverter();
 		this.MetricUnit = new MetricUnit();
 		this.SurfaceCalc = new SurfaceCalc();
+		this.HashGenerator = new HashGenerator();
 	}
 }
