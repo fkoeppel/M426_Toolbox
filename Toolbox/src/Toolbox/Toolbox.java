@@ -22,6 +22,7 @@ public class Toolbox {
 	public GewichtsmasseUmwandeln GewichtsmasseUmwandeln;
 	public Round Round;
 	public Time Time;
+	public mp4tomp3 mp4tomp3;
 	
 	public Toolbox() {
 		this.TextSuchen = new TextSuchen();
@@ -38,5 +39,6 @@ public class Toolbox {
 		this.GewichtsmasseUmwandeln = new GewichtsmasseUmwandeln();
 		this.Round = new Round();
 		this.Time = new Time();
+		this.mp4tomp3 = new mp4tomp3();
 	}
 }
