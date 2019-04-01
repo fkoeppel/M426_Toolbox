@@ -10,6 +10,7 @@ package Toolbox;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Map.Entry;
 
 public class TextEditor {
@@ -116,6 +117,33 @@ public class TextEditor {
             } 
         } 
         return true; 
-    } 
-	
+    }
+
+	public List<String> suchen(String text, String suche) {
+		String[] splitted = text.split("\\.");
+		LinkedList<String> lines = new LinkedList<String>();
+		for (String string : splitted) {
+			if(string.contains(suche)) {
+				lines.add(string.trim() + ".");
+			}
+		}
+		return lines;
+	}
+
+	public String loeschen(String text, String loeschen, int whitespaces) {
+		if(text == null || loeschen == null) {
+			throw new IllegalArgumentException("Text wird verlangt!");
+		}
+		
+		if(whitespaces == 0) {
+			text = text.replaceAll(loeschen, "");
+		}else if (whitespaces == 1) {
+			text = text.replaceAll(loeschen + " ", "");
+		}else if (whitespaces == -1) {
+			text = text.replaceAll(" " + loeschen, "");
+		}else {
+			throw new IllegalArgumentException("Parameter sind nicht valide!");
+		}
+		return text;
+	} 
 }

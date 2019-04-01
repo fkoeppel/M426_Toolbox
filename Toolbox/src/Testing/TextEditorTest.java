@@ -1,5 +1,8 @@
 package Testing;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 /*
  * author:		Manuel Häuptli
  * element:		037 & 039
@@ -8,69 +11,47 @@ package Testing;
  */
 
 import java.util.HashMap;
+import java.util.LinkedList;
 
+import org.junit.Test;
 import Toolbox.TextEditor;
 
 public class TextEditorTest {
 	private TextEditor test = new TextEditor();
 	
-	public TextEditorTest() {
-		this.textZaehlen();
-		this.textErsetzen();
+	@Test
+	public void suchen() {
+		String text = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.";
+		String suche = "consetetur";
+		LinkedList<String> expected = new LinkedList<String>();
+		expected.add("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.");
+		expected.add("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.");
+		assertEquals(expected, test.suchen(text,suche));
 	}
 	
-	public boolean textZaehlen() {
-		String methodName = new Object() {}
-	      .getClass()
-	      .getEnclosingMethod()
-	      .getName();
-		System.out.println(methodName + "...");
-		try {
-			//OWN BEGIN
-			int count = test.textZaehlen("Lorem ipsum ö hansli ä ! ? d asdmflkn Ü -. \r\r\n");
-			if (count == 8) {
-			//OWN END
-				System.out.println("SUCCESS " + methodName);
-				return true;
-			}else {
-				System.out.println("Should:" + 8 + "Actual:" + count);
-				return false;
-			}
-		} catch (Exception e) {
-			System.out.println("FAILURE, " + methodName + " " + e);
-		}	
-		
-		System.out.println("FAILURE " + methodName);
-		return false;
+	@Test
+	public void loeschen() {
+		String text = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.";
+		String loeschen = "consetetur";
+		String expected = "Lorem ipsum dolor sit amet, sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.";
+		assertEquals(expected, test.loeschen(text, loeschen, -1));
+		assertEquals(expected, test.loeschen(text, loeschen, 1));
+		assertNotEquals(expected, test.loeschen(text, loeschen, 0));
 	}
 	
-	public boolean textErsetzen() {
-		String methodName = new Object() {}
-	      .getClass()
-	      .getEnclosingMethod()
-	      .getName();
-		System.out.println(methodName + "...");
-		try {
-			//OWN BEGIN
-			String text = "Hallo meine Freunde!";
-			String expected = "Moin deine Freunde!";
-			HashMap<String, String> map = new HashMap<String, String>();
-			map.put("Hallo", "Moin");
-			map.put("meine", "deine");
-			
-			if (test.textErsetzen(text, map).equals(expected)) {
-			//OWN END
-				System.out.println("SUCCESS " + methodName);
-				return true;
-			}else {
-				System.out.println(test.textErsetzen(text, map));
-				return false;
-			}
-		} catch (Exception e) {
-			System.out.println("FAILURE, " + methodName + " " + e);
-		}	
+	@Test
+	public void zaehlen() {
+		assertEquals(8, test.textZaehlen("Lorem ipsum ö hansli ä ! ? d asdmflkn Ü -. \r\r\n"));
+	}
+	
+	@Test
+	public void ersetzen() {
+		String text = "Hallo meine Freunde!";
+		String expected = "Moin deine Freunde!";
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("Hallo", "Moin");
+		map.put("meine", "deine");
 		
-		System.out.println("FAILURE " + methodName);
-		return false;
+		assertEquals(expected, test.textErsetzen(text, map));
 	}
 }
