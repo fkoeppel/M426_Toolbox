@@ -21,7 +21,8 @@ public class Toolbox {
 	public HashGenerator HashGenerator;
 	public GewichtsmasseUmwandeln GewichtsmasseUmwandeln;
 	public Round Round;
-
+	public Time Time;
+	
 	public Toolbox() {
 		this.TextSuchen = new TextSuchen();
 		this.TextEditor = new TextEditor();
@@ -36,5 +37,6 @@ public class Toolbox {
 		this.HashGenerator = new HashGenerator();
 		this.GewichtsmasseUmwandeln = new GewichtsmasseUmwandeln();
 		this.Round = new Round();
+		this.Time = new Time();
 	}
 }
