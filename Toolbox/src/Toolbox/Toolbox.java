@@ -19,7 +19,9 @@ public class Toolbox {
 	public MetricUnit MetricUnit;
 	public SurfaceCalc SurfaceCalc;
 	public HashGenerator HashGenerator;
-	
+	public GewichtsmasseUmwandeln GewichtsmasseUmwandeln;
+	public Round Round;
+
 	public Toolbox() {
 		this.TextSuchen = new TextSuchen();
 		this.TextEditor = new TextEditor();
@@ -32,5 +34,7 @@ public class Toolbox {
 		this.MetricUnit = new MetricUnit();
 		this.SurfaceCalc = new SurfaceCalc();
 		this.HashGenerator = new HashGenerator();
+		this.GewichtsmasseUmwandeln = new GewichtsmasseUmwandeln();
+		this.Round = new Round();
 	}
 }
