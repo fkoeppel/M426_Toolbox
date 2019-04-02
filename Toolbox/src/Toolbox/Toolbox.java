@@ -23,6 +23,7 @@ public class Toolbox {
 	public Round Round;
 	public TriangleCalc TriangleCalc;
 	public BerechnungPyramide BerechnungPyramide;
+	public CapacityConversion CapacityConversion;
 
 	public Toolbox() {
 		this.TextSuchen = new TextSuchen();
@@ -40,5 +41,6 @@ public class Toolbox {
 		this.Round = new Round();
 		this.TriangleCalc = new TriangleCalc();
 		this.BerechnungPyramide = new BerechnungPyramide();
+		this.CapacityConversion = new CapacityConversion();
 	}
 }
