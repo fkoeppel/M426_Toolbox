@@ -2,7 +2,7 @@
  * author:		Kimi Janshon
  * element:		012
  * date:		18.03.19
- * 
+ *
  */
 
 package Toolbox;
@@ -16,7 +16,7 @@ public class Promillewert {
 	public double[] volumen;
 	public int[] anzahl;
 	private Scanner scanner = new Scanner(System.in);
-	
+
 	public void getStarted() {
 		boolean success = this.getInformation();
 		if (success) {
@@ -27,7 +27,7 @@ public class Promillewert {
 			System.out.println("FEHLER!");
 		}
 	}
-	
+
 	private boolean getInformation() {
 		System.out.println("Wählen Sie ihr Geschlecht. Männlich (1) oder Weiblich (2)");
 		int geschlecht_zahl = this.scanner.nextInt();
@@ -46,7 +46,7 @@ public class Promillewert {
 		}
 		return true;
 	}
-	
+
 	private void getraenke() {
 		System.out.println("Wieviele verschiedene Getränke haben Sie konsumiert? (Bier, Vodka, Gin, etc.)");
 		this.anz_getraenke = this.scanner.nextInt();
@@ -63,7 +63,7 @@ public class Promillewert {
 			anzahl[i-1] = this.scanner.nextInt();
 		}
 	}
-	
+
 	public double berechnen() {
 		double res = 0.0;
 		for (int i = 0; i < this.anz_getraenke; i++) {

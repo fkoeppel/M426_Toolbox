@@ -4,7 +4,7 @@ package Toolbox;
  * author:		Vorname Nachname
  * element:		XXX
  * date:		18.03.19
- * 
+ *
  */
 
 public class Toolbox {
@@ -24,6 +24,9 @@ public class Toolbox {
 	public TriangleCalc TriangleCalc;
 	public BerechnungPyramide BerechnungPyramide;
 	public CapacityConversion CapacityConversion;
+	public Pythagoras Pythagoras;
+	public mp4tomp3 mp4tomp3;
+	public SpeedCalc SpeedCalc;
 
 	public Toolbox() {
 		this.TextSuchen = new TextSuchen();
@@ -42,5 +45,8 @@ public class Toolbox {
 		this.TriangleCalc = new TriangleCalc();
 		this.BerechnungPyramide = new BerechnungPyramide();
 		this.CapacityConversion = new CapacityConversion();
-	}
+		this.Pythagoras = new Pythagoras();
+		this.mp4tomp3 = new mp4tomp3();
+		this.SpeedCalc = new SpeedCalc();
+		}
 }
